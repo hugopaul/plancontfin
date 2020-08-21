@@ -25,11 +25,11 @@ public class PlanilhaController {
     public List<Planilha> obterTodos(
             @RequestParam(value = "notaFiscalNumero",
                     required = false)String notaFiscalNumero){
-            if(notaFiscalNumero == null ){
-                return repository.findAll();
-            }else {
-                return repository.findByNotaFiscalNumero("%" + notaFiscalNumero + "%");
-            }
+        if(notaFiscalNumero == null ){
+            return repository.findAll();
+        }else {
+            return repository.findByNotaFiscalNumero("%" + notaFiscalNumero + "%");
+        }
     }
 
     @PostMapping
